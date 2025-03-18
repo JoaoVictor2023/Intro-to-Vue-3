@@ -24,10 +24,10 @@
     <h1>{{ product }}</h1> <!-- appelle la variable "product" de l'app  -->
     <!-- product est une valeur dynamique, si elle change dans le main.js, elle change sa valeur ici aussi -->
     <ul>
-      <li><a :href="url">École</a></li> <!-- v-bind:href est nécessaire pour que le lien de la balise "a" fonctionne dans les normes -->
+      <li><a :href="url">École</a></li> <!-- Ex à vous de coder --> <!-- v-bind:href est nécessaire pour que le lien de la balise "a" fonctionne dans les normes -->
       <li><a v-bind:href="url">École toujours</a></li> <!-- :href fonctionne dans le même sens que v-bind:href mais sous une forme raccourci -->
     </ul>
-    <p>{{ description }}</p> <!-- appelle la variable "description" de l'app  -->
+    <p>{{ description }}</p> <!-- Ex à vous de coder --> <!-- appelle la variable "description" de l'app  -->
 <br><br><br><br><br> <!-- juste pour faire un petit espace entre chaque partie -->
     
 
@@ -39,7 +39,7 @@
      <p v-else-if="inventory <= 10 && inventory > 0">Il en reste {{ inventory }}</p> <!-- v-else-if fonctionne comme une fonction else if en c#, elle sert à faire la conditionnel "sinon si" -->
      <p v-else>Hors stock</p> <!-- v-else fonctionne comme une fonction else en c#, elle sert à faire la conditionnel "sinon" -->
 
-     <p v-show="onSale">On Sale</p> <!-- v-show fonctionne comme le v-if mais permet d'afficher si = true ou de ne pas afficher si = false le message -->
+     <p v-show="onSale">On Sale</p> <!-- Ex à vous de coder --> <!-- v-show fonctionne comme le v-if mais permet d'afficher si = true ou de ne pas afficher si = false le message -->
     
 
     <!-- LISTES & TABLEAUX -->
@@ -47,11 +47,13 @@
     <ul>
       <li v-for="detail in details">{{ detail }}</li> <!-- le v-for fonctionne comme un foreach en c#, il sert à répéter une liste jusqu'à sa fin -->
     </ul>
+    <ul>
+      <li v-for="size in sizes">{{ size }}</li> <!-- Ex à vous de coder -->
+    </ul>
+  
 
     <div v-for="variant in variants" v-bind:key="variant.id"> {{ variant.color }}</div> <!-- le v-for fonctionne aussi avec un tableau mais utilise "v-bind:key" pour appeller un des éléments du tableau -->
     
-
-  
 
 
 
