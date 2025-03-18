@@ -9,24 +9,34 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <!-- Import App -->
   <script src="./main.js"></script>
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>
 
 <body>
 
   <h1>Product goes here</h1>
   <div id="app">
-    <h1>{{ product }}</h1> <!-- product est une valeur dynamique, si elle change dans le main.js, elle change sa valeur ici aussi -->
-    
+    <h1>{{ product }}</h1>
+    <!-- product est une valeur dynamique, si elle change dans le main.js, elle change sa valeur ici aussi -->
+    <ul>
+      <li><a :href="url">École</a></li>
+      <li><a v-bind:href="url">École toujours</a></li>
+    </ul>
     <p>{{ description }}</p>
+<br><br><br><br><br>
+    
+     <p v-if="inStock">In Stock</p> <!-- v-if fonctionne comme une balise if en c#, elle sert à faire la conditionnel "si" -->
+     <p v-else>Out of Stock</p>
     
     <div class="product-image">
       <!-- emplacement des images -->
-      <img v-bind:src="image"> <!-- v-bind:src est utilisé pour l'affichage des images -->
-  
+      <img v-bind:src="imageB"> <!-- v-bind:src est utilisé pour l'affichage des images -->
+      <img :src="imageG"> <!-- :src est aussi utilisé pour l'affichage des images -->
+      
     </div>
-
+    
   </div>
-  
+
 </body>
 
 <script>
