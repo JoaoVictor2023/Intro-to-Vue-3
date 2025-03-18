@@ -10,7 +10,7 @@ const app = Vue.createApp({
         return{
             product: product,
             description: description,
-            image: './assets/images/socks_blue.jpg'
+            image: './assets/images/socks_green.jpg'
         }
     }
 });

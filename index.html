@@ -18,14 +18,15 @@
     <h1>{{ product }}</h1> <!-- product est une valeur dynamique, si elle change dans le main.js, elle change sa valeur ici aussi -->
     
     <p>{{ description }}</p>
-
+    
+    <div class="product-image">
+      <!-- emplacement des images -->
+      <img v-bind:src="image">
+  
+    </div>
+    
   </div>
   
-  <div class="product-image">
-    <!-- emplacement des images -->
-    
-    
-  </div>
 </body>
 
 <script>
