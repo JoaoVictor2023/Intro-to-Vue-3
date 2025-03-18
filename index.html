@@ -45,9 +45,10 @@
     <!-- LISTES & TABLEAUX -->
 
     <ul>
-      <li v-for="detail in details">{{ detail }}</li>
+      <li v-for="detail in details">{{ detail }}</li> <!-- le v-for fonctionne comme un foreach en c#, il sert à répéter une liste jusqu'à sa fin -->
     </ul>
 
+    <div v-for="variant in variants" v-bind:key="variant.id"> {{ variant.color }}</div> <!-- le v-for fonctionne aussi avec un tableau mais utilise "v-bind:key" pour appeller un des éléments du tableau -->
     
 
   
