@@ -29,9 +29,6 @@
     </ul>
     <p>{{ description }}</p> <!-- Ex à vous de coder --> <!-- appelle la variable "description" de l'app  -->
 <br><br><br><br><br> <!-- juste pour faire un petit espace entre chaque partie -->
-    
-
-
 
     <!-- CONDITIONS -->
 
@@ -55,7 +52,11 @@
     <div v-for="variant in variants" v-bind:key="variant.id"> {{ variant.color }}</div> <!-- le v-for fonctionne aussi avec un tableau mais utilise "v-bind:key" pour appeller un des éléments du tableau -->
     
 
+    <!-- GESTION DES ÉVÉNEMENTS -->
 
+    <div class="cart">Cart({{ cart }})</div>
+    
+    <button class="button" v-on:click="logic to run">Add to Cart</button>
 
     <!-- AFFICHAGE IMAGE -->
 

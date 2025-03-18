@@ -13,6 +13,9 @@ const imageG = './assets/images/socks_green.jpg'
 // déclaration du chemin absolu de l'image chaussette verte
 const etml = 'https://www.etml.ch/'
 
+// 
+const cart = 0
+
 // création d'application Vue
 const app = Vue.createApp({
     data() {
@@ -29,7 +32,8 @@ const app = Vue.createApp({
                 { id: 2234, color: 'green' },
                 { id: 2235, color: 'blue' }
                 ],
-            sizes: ['S', 'M', 'L', 'XL']
+            sizes: ['S', 'M', 'L', 'XL'],
+            cart: cart,
         }
     }
 });
