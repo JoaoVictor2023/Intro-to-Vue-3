@@ -23,7 +23,9 @@ const app = Vue.createApp({
             imageG: imageG,
             url: etml,
             inventory: 6,
-            onSale: true
+            onSale: true,
+            details: ['50% cooton', '30% wool', '20% polyester'],
+            
         }
     }
 });

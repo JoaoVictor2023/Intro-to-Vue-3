@@ -16,6 +16,11 @@
 
   <h1>Product goes here</h1>
   <div id="app">
+
+
+    <!-- VUE "BASE" -->
+
+
     <h1>{{ product }}</h1> <!-- appelle la variable "product" de l'app  -->
     <!-- product est une valeur dynamique, si elle change dans le main.js, elle change sa valeur ici aussi -->
     <ul>
@@ -25,12 +30,32 @@
     <p>{{ description }}</p> <!-- appelle la variable "description" de l'app  -->
 <br><br><br><br><br> <!-- juste pour faire un petit espace entre chaque partie -->
     
+
+
+
+    <!-- CONDITIONS -->
+
      <p v-if="inventory > 10">En stock</p> <!-- v-if fonctionne comme une fonction if en c#, elle sert à faire la conditionnel "si" -->
      <p v-else-if="inventory <= 10 && inventory > 0">Il en reste {{ inventory }}</p> <!-- v-else-if fonctionne comme une fonction else if en c#, elle sert à faire la conditionnel "sinon si" -->
      <p v-else>Hors stock</p> <!-- v-else fonctionne comme une fonction else en c#, elle sert à faire la conditionnel "sinon" -->
 
      <p v-show="onSale">On Sale</p> <!-- v-show fonctionne comme le v-if mais permet d'afficher si = true ou de ne pas afficher si = false le message -->
     
+
+    <!-- LISTES & TABLEAUX -->
+
+    <ul>
+      <li v-for="detail in details">{{ detail }}</li>
+    </ul>
+
+    
+
+  
+
+
+
+    <!-- AFFICHAGE IMAGE -->
+
     <div class="product-image">
       <!-- emplacement des images -->
       <img v-bind:src="imageB"> <!-- v-bind:src est utilisé pour l'affichage des images -->
