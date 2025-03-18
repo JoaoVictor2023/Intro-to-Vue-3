@@ -1,5 +1,5 @@
 // une chaussette qui est un produit
-const product = 'Socks'
+const product = 'Boots'
 
 // création d'application Vue
 const app = Vue.createApp({

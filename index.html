@@ -14,14 +14,14 @@
 <body>
   <h1>Product goes here</h1>
   <div id="app">
-    <h1>{{ product }}</h1>
+    <h1>{{ product }}</h1> <!-- product est une valeur dynamique, si elle chhange dans le main.js, elle change sa valeur ici aussi -->
   </div>
 
+</body>
   <script>
     // Montage de notre application
     const mountedApp = app.mount('#app') // app = application créé sur main.js et .mount() = méthode
   </script>
-</body>
 
 
 </html>
