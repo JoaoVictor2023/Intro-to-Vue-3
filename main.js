@@ -1,11 +1,15 @@
 // une chaussette qui est un produit
-const product = 'Boots'
+const product = 'Socks'
+
+// déclaration de description
+const description = 'les chaussettes sont belles!'
 
 // création d'application Vue
 const app = Vue.createApp({
     data() {
         return{
-            product: product
+            product: product,
+            description: description
         }
     }
 });
