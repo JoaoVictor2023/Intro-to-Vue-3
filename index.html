@@ -16,18 +16,20 @@
 
   <h1>Product goes here</h1>
   <div id="app">
-    <h1>{{ product }}</h1>
+    <h1>{{ product }}</h1> <!-- appelle la variable "product" de l'app  -->
     <!-- product est une valeur dynamique, si elle change dans le main.js, elle change sa valeur ici aussi -->
     <ul>
-      <li><a :href="url">École</a></li>
-      <li><a v-bind:href="url">École toujours</a></li>
+      <li><a :href="url">École</a></li> <!-- v-bind:href est nécessaire pour que le lien de la balise "a" fonctionne dans les normes -->
+      <li><a v-bind:href="url">École toujours</a></li> <!-- :href fonctionne dans le même sens que v-bind:href mais sous une forme raccourci -->
     </ul>
-    <p>{{ description }}</p>
-<br><br><br><br><br>
+    <p>{{ description }}</p> <!-- appelle la variable "description" de l'app  -->
+<br><br><br><br><br> <!-- juste pour faire un petit espace entre chaque partie -->
     
-     <p v-if="inventory > 10">En stock</p> <!-- v-if fonctionne comme une balise if en c#, elle sert à faire la conditionnel "si" -->
-     <p v-else-if="inventory <= 10 && inventory > 0">Il en reste {{ inventory }}</p> <!-- v-if fonctionne comme une balise if en c#, elle sert à faire la conditionnel "si" -->
-     <p v-else>Hors stock</p>
+     <p v-if="inventory > 10">En stock</p> <!-- v-if fonctionne comme une fonction if en c#, elle sert à faire la conditionnel "si" -->
+     <p v-else-if="inventory <= 10 && inventory > 0">Il en reste {{ inventory }}</p> <!-- v-else-if fonctionne comme une fonction else if en c#, elle sert à faire la conditionnel "sinon si" -->
+     <p v-else>Hors stock</p> <!-- v-else fonctionne comme une fonction else en c#, elle sert à faire la conditionnel "sinon" -->
+
+     <p v-show="onSale">On Sale</p> <!-- v-show fonctionne comme le v-if mais permet d'afficher si = true ou de ne pas afficher si = false le message -->
     
     <div class="product-image">
       <!-- emplacement des images -->

@@ -22,7 +22,8 @@ const app = Vue.createApp({
             imageB: imageB,
             imageG: imageG,
             url: etml,
-            inventory: 6
+            inventory: 6,
+            onSale: true
         }
     }
 });
