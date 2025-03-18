@@ -25,8 +25,9 @@
     <p>{{ description }}</p>
 <br><br><br><br><br>
     
-     <p v-if="inStock">In Stock</p> <!-- v-if fonctionne comme une balise if en c#, elle sert à faire la conditionnel "si" -->
-     <p v-else>Out of Stock</p>
+     <p v-if="inventory > 10">En stock</p> <!-- v-if fonctionne comme une balise if en c#, elle sert à faire la conditionnel "si" -->
+     <p v-else-if="inventory <= 10 && inventory > 0">Il en reste {{ inventory }}</p> <!-- v-if fonctionne comme une balise if en c#, elle sert à faire la conditionnel "si" -->
+     <p v-else>Hors stock</p>
     
     <div class="product-image">
       <!-- emplacement des images -->
