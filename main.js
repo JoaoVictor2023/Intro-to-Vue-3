@@ -16,16 +16,21 @@ const etml = 'https://www.etml.ch/'
 // déclaration du panier de base
 const cart = 0
 
+var inventory = 6
+
+const inStock = inventory > 0
+
 // création d'application Vue
 const app = Vue.createApp({
     data() {
         return {
             product: product,
+            brand: 'Vue Mastery',
             description: description,
             imageB: blueSocks,
             url: etml,
-            inventory: 6,
-            inStock: false,
+            inventory: inventory,
+            inStock: inStock,
             onSale: true,
             details: ['50% cooton', '30% wool', '20% polyester'],
             variants: [
@@ -34,6 +39,7 @@ const app = Vue.createApp({
             ],
             sizes: ['S', 'M', 'L', 'XL'],
             cart: cart,
+            
         }
     },
     methods: {
@@ -45,6 +51,11 @@ const app = Vue.createApp({
         },
         removeCart(){
             this.cart -= 1
+        },
+    },
+    computed:{
+        title(){
+            return this.brand + ' ' + this.product
         }
     }
 });
