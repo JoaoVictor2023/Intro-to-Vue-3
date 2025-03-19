@@ -68,30 +68,36 @@
     <!-- v-on:click sert à effectuer une opération (directe(cart+=1) ou indirecte avec une méthode(addToCart)) -->
     <button class="button" @click="addToCart">Add to Cart</button> <!-- @click est un raccourci de v-on:click -->
 
-    
-    <button v-show="cart > 0" class="button" v-on:click="removeCart">Remove Cart</button> <!-- à vous de coder remove cart -->
-    
-    
-    
+
+    <button v-show="cart > 0" class="button" v-on:click="removeCart">Remove Cart</button>
+    <!-- à vous de coder remove cart -->
+
+
+
     <!-- AFFICHAGE IMAGE -->
 
     <div class="product-image">
       <!-- emplacement des images -->
-      <img v-bind:src="imageB"> <!-- v-bind:src est utilisé pour l'affichage des images -->
+      <img v-bind:class="{ 'out-of-stock-img': !inStock }" v-bind:src="imageB"> <!-- v-bind:src est utilisé pour l'affichage des images -->
 
     </div>
 
     <!-- MOUSEOVER -->
-     <!-- v-on:mouseover sert à quand on passe sur les variant.color il change la couleur en lien avec le nom de la couleur respective -->
+    <!-- v-on:mouseover sert à quand on passe sur les variant.color il change la couleur en lien avec le nom de la couleur respective -->
     <div v-for="variant in variants" v-bind:key="variant.id" v-on:mouseover="updateImage(variant.image)">
       {{ variant.color }}
     </div>
 
     <!-- LIAISON DE STYLE -->
 
-    <div v-for="variant in variants" v-bind:key="variant.id" v-on:mouseover="updateImage(variant.image)" class="color-circle" v-bind:style="{ backgroundColor: variant.color }">
-    </div>
+    <div v-for="variant in variants" v-bind:key="variant.id" v-on:mouseover="updateImage(variant.image)"
+      class="color-circle" v-bind:style="{ backgroundColor: variant.color }"></div>
 
+    <!-- LIAISON DE CLASSE -->
+
+    <button class="button" v-bind:class="{ disabledButton: !inStock }" v-bind:disabled="!inStock" v-on:click="addToCart" >
+      Add to Cart
+    </button>
 
 
   </div>

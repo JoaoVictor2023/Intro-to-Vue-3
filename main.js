@@ -13,7 +13,7 @@ const greenSocks = './assets/images/socks_green.jpg'
 // déclaration du chemin absolu de l'image chaussette verte
 const etml = 'https://www.etml.ch/'
 
-// 
+// déclaration du panier de base
 const cart = 0
 
 // création d'application Vue
@@ -25,6 +25,7 @@ const app = Vue.createApp({
             imageB: blueSocks,
             url: etml,
             inventory: 6,
+            inStock: false,
             onSale: true,
             details: ['50% cooton', '30% wool', '20% polyester'],
             variants: [
