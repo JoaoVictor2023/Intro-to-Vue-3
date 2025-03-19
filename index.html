@@ -69,7 +69,7 @@
     <button class="button" @click="addToCart">Add to Cart</button> <!-- @click est un raccourci de v-on:click -->
 
     
-    <button class="button" v-on:click="removeCart">Remove Cart</button> <!-- à vous de coder remove cart -->
+    <button v-show="cart > 0" class="button" v-on:click="removeCart">Remove Cart</button> <!-- à vous de coder remove cart -->
     
     
     
