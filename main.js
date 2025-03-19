@@ -5,7 +5,10 @@ const product = 'Socks'
 const description = 'les chaussettes sont belles!'
 
 // déclaration du chemin absolu de l'image chaussette bleue
-const imageB = './assets/images/socks_blue.jpg'
+const blueSocks = './assets/images/socks_blue.jpg'
+
+// déclaration du chemin absolu de l'image chaussette verte
+const greenSocks = './assets/images/socks_green.jpg'
 
 // déclaration du chemin absolu de l'image chaussette verte
 const etml = 'https://www.etml.ch/'
@@ -16,25 +19,28 @@ const cart = 0
 // création d'application Vue
 const app = Vue.createApp({
     data() {
-        return{
+        return {
             product: product,
             description: description,
-            imageB: imageB,
+            imageB: blueSocks,
             url: etml,
             inventory: 6,
             onSale: true,
             details: ['50% cooton', '30% wool', '20% polyester'],
             variants: [
-                { id: 2234, color: 'green' },
-                { id: 2235, color: 'blue' }
-                ],
+                { id: 2234, color: 'green', image: greenSocks },
+                { id: 2235, color: 'blue', image: blueSocks }
+            ],
             sizes: ['S', 'M', 'L', 'XL'],
             cart: cart,
         }
     },
-    methods:{
-        addToCart(){
+    methods: {
+        addToCart() {
             this.cart += 1
+        },
+        updateImage(variantImage) {
+            this.imageB = variantImage
         }
     }
 });
