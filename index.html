@@ -87,6 +87,12 @@
       {{ variant.color }}
     </div>
 
+    <!-- LIAISON DE STYLE -->
+
+    <div v-for="variant in variants" v-bind:key="variant.id" v-on:mouseover="updateImage(variant.image)" class="color-circle" v-bind:style="{ backgroundColor: variant.color }">
+    </div>
+
+
 
   </div>
 
