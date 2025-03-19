@@ -16,9 +16,8 @@ const etml = 'https://www.etml.ch/'
 // déclaration du panier de base
 const cart = 0
 
-var inventory = 6
+const inventory = 6
 
-const inStock = inventory > 0
 
 // création d'application Vue
 const app = Vue.createApp({
@@ -59,7 +58,7 @@ const app = Vue.createApp({
             return this.brand + ' ' + this.product
         },
         image(){
-            return this.variants[this.selectedVariant].imageB
+            return this.variants[this.selectedVariant].image
         },
         inStock(){
             return this.variants[this.selectedVariant].quantity
