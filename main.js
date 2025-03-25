@@ -37,7 +37,6 @@ const app = Vue.createApp({
             sizes: ['S', 'M', 'L', 'XL'],
             cart: cart,
             selectedVariant: 0,
-            onSale: true
         }
     },
     methods: {
@@ -64,9 +63,11 @@ const app = Vue.createApp({
         inStock(){
             return this.variants[this.selectedVariant].quantity
         },
-        onSale(){
-                return this.title + ' ' + 'is on sale'
-            
+        sale() {
+            if (this.onSale) {
+                return this.brand + ' ' + this.product + ' is on sale.'
+            }
+            return ''
         }
     }
 });

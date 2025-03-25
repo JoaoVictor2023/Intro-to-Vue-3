@@ -105,7 +105,7 @@
 
     <h1>{{ brand + ' ' + product }}</h1> <!-- addition de 2 "variables" (pas optimiser) -->
     <h1>{{ title }}</h1> <!-- fusion des 2 dans le main.js (optimiser) -->
-    <p>{{ onSale }} </p>
+    <p>{{ sale }} </p> <!-- Ex à vous de coder -->
 
     <div v-for="(variant, index) in variants" v-bind:key="variant.id" v-on:mouseover="updateVariant(index)"
       class="color-circle" v-bind:style="{ backgroundColor: variant.color }">
